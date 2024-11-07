@@ -13,7 +13,7 @@
     --font-inter: 'Inter';
     --font-axiforma: 'Axiforma';
     --font-roboto: 'Roboto';
-    --font-sora:'Sora';
+    --font-sora: 'Sora';
 }
 
 /* src/fonts.css */
@@ -54,14 +54,13 @@
 .navbar-toggler:focus {
     box-shadow: none;
 }
-
 .navbar-responsive {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.home-page .navbar {
+.main-layout .navbar {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -69,14 +68,14 @@
     height: 92px;
 }
 
-.home-page .navbar-nav .nav-item.active a.nav-link {
+.main-layout .navbar-nav .nav-item.active a.nav-link {
     /* color: var(--primary-blue); */
     font-family: var(--font-inter);
     font-size: 14px;
     font-weight: 700;
 }
 
-.home-page .navbar-nav li a.nav-link {
+.main-layout .navbar-nav li a.nav-link {
     font-family: var(--font-inter);
     font-size: 14px;
     font-weight: 500;
@@ -84,21 +83,22 @@
     margin: 0 10px;
 }
 
-.home-page .nav-link {
+.main-layout .nav-link {
     color: #242552;
 }
 
-.home-page .nav-link.active {
+.main-layout .nav-link.active {
     color: var(--primary-blue);
 }
 
-.home-page .navbar-collapse {
+.main-layout .navbar-collapse {
     flex-grow: 1;
     justify-content: space-between;
-    margin-left: 20px;
+    background-color: var(--white);
+    padding-bottom:10px;
 }
 
-.home-page .navbar-right-nav {
+.main-layout .navbar-right-nav {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -107,7 +107,7 @@
     margin-bottom: 0;
 }
 
-.home-page .navbar-right-nav .link {
+.main-layout .navbar-right-nav .link {
     background: none !important;
     box-shadow: none !important;
 }
@@ -120,15 +120,15 @@
     font-weight: 500;
 }
 
-.home-page .navbar-right-nav .nav-item .nav-link {
+.main-layout .navbar-right-nav .nav-item .nav-link {
     font-size: 14px;
 }
 
-.home-page .navbar-right-nav li i {
+.main-layout .navbar-right-nav li i {
     font-size: 22px;
 }
 
-.home-page .nav-button {
+.main-layout .nav-button {
     background: #242552;
     color: var(--white);
     border-radius: 8px;
@@ -143,18 +143,18 @@
 /* End Navbar */
 
 /* Future of Startups */
-.home-page .hero-section .future-of-startups {
+.main-layout .hero-section .future-of-startups {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 87vh;
 }
 
-.home-page .hero-section .future-of-startups {
+.main-layout .hero-section .future-of-startups {
     /* padding: 90px 0; */
 }
 
-.home-page .future-of-startups h1 {
+.main-layout .future-of-startups h1 {
     font-family: var(--font-inter);
     font-size: 40px;
     font-weight: 700;
@@ -162,7 +162,7 @@
     color: #242552;
 }
 
-.home-page .future-of-startups h1 span {
+.main-layout .future-of-startups h1 span {
     font-family: var(--font-inter);
     font-size: 40px;
     font-weight: 700;
@@ -174,7 +174,7 @@
     color: transparent;
 }
 
-.home-page .future-of-startups p {
+.main-layout .future-of-startups p {
     font-family: var(--font-inter);
     font-size: 19.84px;
     font-weight: 400;
@@ -182,13 +182,13 @@
     line-height: 28px;
 }
 
-.home-page .future-of-startups .buttons {
+.main-layout .future-of-startups .buttons {
     display: flex;
     flex-direction: row;
     margin-top: 30px;
 }
 
-.home-page .future-of-startups .start-investing-btn {
+.main-layout .future-of-startups .start-investing-btn {
     font-family: var(--font-inter);
     font-size: 16px;
     font-weight: 700;
@@ -200,7 +200,7 @@
     margin-right: 20px;
 }
 
-.home-page .future-of-startups .enroll-startup-btn {
+.main-layout .future-of-startups .enroll-startup-btn {
     border: 1px solid var(--primary-blue);
     background-color: var(--white);
     font-family: var(--font-inter);
@@ -211,7 +211,7 @@
     border-radius: 8px;
 }
 
-.home-page .hero-banner-img {
+.main-layout .hero-banner-img {
     height: 87vh;
     width: 100%;
     object-fit: cover;
@@ -282,58 +282,73 @@
     color: #242552;
 }
 
+.fund-section .head {
+    font-family: var(--font-inter);
+    font-size: 32px;
+    font-weight: 500;
+    color: #727272;
+    margin-top: 50px;
+}
+
 .fund-section .content {
     font-size: 20px;
     font-weight: 500;
     color: #8E8E8E;
     margin-bottom: 0;
 }
-.fund-section .card{
+
+.fund-section .card {
     border: 1px solid #DADADA;
     border-radius: 16px;
-    padding:20px;
-    min-height:470px;
-    margin-top:70px;
+    padding: 20px;
+    min-height: 470px;
+    margin-top: 50px;
 }
-.fund-section .card-img{
+
+.fund-section .card-img {
     border-top-left-radius: 16px;
     border-top-right-radius: 16px;
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
-    height:220px;
+    height: 220px;
 }
 
-.fund-section .card-img1{
-    height:150px;
+.fund-section .card-img1 {
+    height: 150px;
     object-fit: cover;
     object-position: top;
 }
-.fund-section .subcontent{
+
+.fund-section .subcontent {
     font-family: var(--font-inter);
     font-size: 16px;
     font-weight: 500;
-    color:var(--primary-dark);
-    margin-bottom:90px;
+    color: var(--primary-dark);
+    margin-bottom: 50px;
 }
-.fund-section label{
-    font-size:15px;
+
+.fund-section label {
+    font-size: 15px;
     font-weight: 700;
-    color:#3C3E86;
+    color: #3C3E86;
     background-color: #EBECFF;
     border-radius: 3.5px;
-    padding:3px 5px;
-    margin-right:10px;
-    margin-top:10px;
+    padding: 3px 5px;
+    margin-right: 10px;
+    margin-top: 10px;
 }
-.fund-section .fund-details{
+
+.fund-section .fund-details {
     font-family: var(--poppins);
     font-size: 16px;
     font-weight: 500;
-    color:#242552;
+    color: #242552;
 }
-.fund-section .fund-details span{
-    color:#BEBEBE;
+
+.fund-section .fund-details span {
+    color: #BEBEBE;
 }
+
 .job-roles .carousel-inner {
     border-radius: 19px;
     background: var(--white);
@@ -866,13 +881,14 @@
 
 /* End Blog Section */
 /* Investment on BizDateUp */
-.investments-on-bizdateup .subheading{
+.investments-on-bizdateup .subheading {
     font-family: var(--font-inter);
     font-size: 16px;
     font-weight: 600;
-    color:#7E7E7E;
+    color: #7E7E7E;
 }
-.investments-on-bizdateup .heading{
+
+.investments-on-bizdateup .heading {
     font-size: 30px;
     font-weight: 700;
     background: linear-gradient(92.34deg, #3C3E86 3.5%, #BBBCFF 98.04%);
@@ -880,17 +896,20 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-    width:70%;
+    width: 70%;
 }
-.investments-on-bizdateup .content{
+
+.investments-on-bizdateup .content {
     font-family: var(--font-inter);
-    font-size:20px;
+    font-size: 20px;
     font-weight: 400;
-    color:#7E7E7E;
+    color: #7E7E7E;
 }
-.investments-on-bizdateup .nav{
-    border-bottom:0;
+
+.investments-on-bizdateup .nav {
+    border-bottom: 0;
 }
+
 .investment-tabs-container {
     display: flex;
     flex-direction: column;
@@ -928,32 +947,44 @@
 .investment-tabs-container .tab-pane {
     animation: fadeIn 0.3s ease-in-out;
 }
-.investment-tabs-container .nav-tabs{
-    border-bottom:none;
+
+.investment-tabs-container .nav-tabs {
+    border-bottom: none;
 }
-.investment-tabs-container .nav-tabs .nav-item.show .nav-link,.nav-tabs .nav-link{
-    border:none;
-    color:#CCCCCC;
+
+.investment-tabs-container .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link {
+    border: none;
+    color: #CCCCCC;
     font-family: var(--font-sora);
     font-size: 20px;
     font-weight: 700;
     border-bottom: 2px solid #E0E0E0;
-    padding:20px 25px;
-    width:70%;
+    padding: 20px 25px;
+    width: 70%;
     text-align: start;
 }
-.investment-tabs-container .nav-tabs .nav-item.show .nav-link, .nav-tabs .nav-link.active{
-    border:none;
-    color:#242552;
+
+.investment-tabs-container .nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+    border: none;
+    color: #242552;
     font-family: var(--font-sora);
     font-size: 20px;
     font-weight: 700;
     border-bottom: 2px solid var(--primary-blue);
 }
+
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
+
 /* End Investment on BizDateUp */
 /* FAQ Section */
 .faq-section {
@@ -1052,6 +1083,7 @@
 .accordion-item:last-of-type>.accordion-header .accordion-button.collapsed {
     border-radius: 24px;
 }
+
 /* End FAQ */
 
 /* Footer */
@@ -1098,7 +1130,47 @@
     margin-top: 80px;
 }
 
-@media(max-width:768px){
+.investor-labels {
+    margin-top: 0;
+}
+
+.investor-label .investor-data {
+    font-family: var(--poppins);
+    font-size: 12px;
+    font-weight: 400;
+    color: #8B8B8B;
+    background-color: #fff;
+    border: 1px solid #D7D8FF;
+    border-radius: 7px;
+    padding: 12px;
+    margin: 20px 20px 20px 0;
+}
+
+.investor-label .investor-data:hover {
+    cursor: pointer;
+}
+
+
+
+@media(max-width:768px) {
+    .main-layout .future-of-startups .buttons{
+        flex-direction: column!important;
+    }
+    .tabs-layout .nav-item {
+        width: 100% !important;
+        margin-bottom: 20px;
+    }
+
+    .tabs-layout .nav-link {
+        width: 100% !important;
+    }
+
+    .investor-labels {
+        padding: 0;
+    }
+    .main-layout .navbar{
+        padding:0 15px;
+    }
     .investment-section {
         margin: 100px 0;
         padding: 40px 20px;
@@ -1110,13 +1182,54 @@
     .investor-section .investor-data{
         margin:10px 20px 10px 0;
     }
+    .fund-section{
+        padding:20px;
+    }
+    .profit-section{
+        padding:20px;
+    }
+    .local-favourite-section{
+        padding: 20px;
+    }
+    .why-bizdateup-section{
+        padding: 20px;
+    }
+    .risk-section{
+        padding:20px;
+    }
+    .blog-section-carousel{
+        padding: 20px;
+    }
+    .investments-on-bizdateup{
+        padding: 20px;
+    }
+    .faq-section{
+        padding: 20px;
+    }
+    .footer{
+        padding:100px 20px 30px 20px;
+    }
+    .footer .link{
+        margin-top:10px;
+    }
+    .hero-section{
+        padding:0 20px;
+    }
+    .main-layout .future-of-startups .start-investing-btn{
+        margin-right:0px;
+    }
 }
+
 @media(max-width:1200px) {
     .navbar-responsive {
         width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        height: 92px;
     }
 
-    .home-page .future-of-startups .buttons {
+    .main-layout .future-of-startups .buttons {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -1137,4 +1250,238 @@
         margin-right: 0;
         bottom: -50px;
     }
+}
+
+.hero-cards {
+    flex: 1 1 45%;
+    /* Each card takes approximately 45% of the width to allow for two cards per row */
+    box-sizing: border-box;
+    min-width: 45%;
+    /* Minimum width to keep it 2 cards per row */
+    max-width: 50%;
+}
+
+.hero-cards .card {
+    border-radius: 19px;
+    margin-left: auto;
+    padding: 20px;
+}
+
+.hero-cards .card .card-img {
+    border-top-left-radius: 19px;
+    border-top-right-radius: 19px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.hero-cards .card .plus-img {
+    height: 50px;
+}
+
+.hero-cards .card-content {
+    font-family: var(--font-inter);
+    font-size: 16px;
+    font-weight: 500;
+    color: #949494;
+    margin-bottom: 0.5rem;
+}
+
+.hero-cards .card-bottom-content {
+    padding: 20px;
+}
+
+.hero-cards .card-bottom-content .investors {
+    font-family: var(--poppins);
+    font-size: 24px;
+    font-weight: 700;
+    color: #242552;
+    margin-bottom: 0;
+}
+
+.hero-cards .card-bottom-content .investors-content {
+    font-family: var(--poppins);
+    font-size: 20px;
+    font-weight: 400;
+    color: #A7A7A7;
+    margin-bottom: 0.5rem;
+}
+
+.hero-cards .card-label label {
+    color: #3C3E86;
+    background-color: #EBECFF;
+    padding: 3px 7px;
+    border-radius: 5px;
+    margin-right: 12px;
+    margin-top: 10px;
+}
+
+/* VerticalScrollCards.css */
+.scrollable-container {
+    max-height: 600px;
+    /* Adjust the height as needed */
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding: 10px;
+    display: flex;
+    transform: rotate(5deg);
+    flex-direction: column;
+    gap: 20px;
+    /* Space between cards */
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    /* Space between cards */
+}
+
+/* Styles for two scrollable containers */
+.scrollable-container-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    gap: 20px;
+    /* Space between the two containers */
+}
+
+.scrollable-container {
+    max-height: 600px;
+    /* Adjust the height as needed */
+    overflow-y: auto;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.hero-cards {
+    flex: 1 1 45%;
+    /* Each card takes approximately 45% of the width to allow for two cards per row */
+    box-sizing: border-box;
+    min-width: 45%;
+    max-width: 50%;
+}
+
+.hero-cards .card {
+    border-radius: 19px;
+    margin-left: auto;
+    padding: 20px;
+}
+
+.hero-cards .card .card-img {
+    border-top-left-radius: 19px;
+    border-top-right-radius: 19px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.hero-cards .card-content {
+    font-family: var(--font-inter);
+    font-size: 16px;
+    font-weight: 500;
+    color: #949494;
+    margin-bottom: 0.5rem;
+}
+
+.hero-cards .card-bottom-content {
+    padding: 20px;
+}
+
+.hero-cards .card-bottom-content .investors {
+    font-family: var(--poppins);
+    font-size: 24px;
+    font-weight: 700;
+    color: #242552;
+    margin-bottom: 0;
+}
+
+.hero-cards .card-bottom-content .investors-content {
+    font-family: var(--poppins);
+    font-size: 20px;
+    font-weight: 400;
+    color: #a7a7a7;
+    margin-bottom: 0.5rem;
+}
+
+.hero-cards .card-label label {
+    color: #3c3e86;
+    background-color: #ebecff;
+    padding: 3px 7px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.tabs-layout .nav-tabs {
+    border-bottom: none;
+}
+
+.tabs-layout .nav-item p {
+    font-family: var(--font-inter);
+    font-size: 15px;
+    font-weight: 500;
+    color: #929292;
+}
+
+.tabs-layout .nav-item {
+    width: 33.33%;
+}
+
+.tabs-layout .nav-link {
+    border: 3px solid #C9C9C9;
+    border-radius: 15px;
+    width: 90%;
+}
+
+.tabs-layout .nav-link.active {
+    position: relative;
+    border-radius: 15px;
+    background-color: transparent;
+}
+
+.tabs-layout .nav-link.active::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 15px;
+    padding: 3px;
+    background: linear-gradient(101.1deg, #3C3E86 0%, #4349FF 48.92%, #DEF4FF 100%);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    -webkit-mask-composite: destination-out;
+    mask-composite: exclude;
+}
+
+.tabs-layout .nav-link.active .inner-content {
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+}
+
+.tabs-layout .nav-link .heading {
+    font-family: var(--font-inter);
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--primary-dark);
+}
+
+.tabs-layout .nav-link .subheading {
+    font-family: var(--font-inter);
+    font-size: 15px;
+    font-weight: 500;
+    color: #929292;
 }

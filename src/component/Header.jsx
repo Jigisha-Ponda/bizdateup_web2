@@ -1,40 +1,9 @@
 import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Header() {
-    const location = useLocation();
-    const resourceLink = [
-        {
-            id: '01',
-            src: '/assets/images/about-us-link.png',
-            heading: 'About Us',
-            subheading: 'Get creative inspiration',
-            link: '/about'
-        },
-        {
-            id: '02',
-            src: '/assets/images/news-link.png',
-            heading: 'News',
-            subheading: 'Impactful storytelling',
-            link: '/news'
-        },
-        {
-            id: '03',
-            src: '/assets/images/faq-link.png',
-            heading: "FAQ's",
-            subheading: 'Stunning web design',
-            link: '/faq'
-        },
-        {
-            id: '04',
-            src: '/assets/images/blogs-link.png',
-            heading: 'Blogs',
-            subheading: 'Functional digital products',
-            link: '/blogs'
-        },
-    ]
     return (
-        <div className='container'>
+        <div className="container">
             <nav className="navbar navbar-expand-xl navbar-light bg-light">
                 <div className="navbar-responsive">
                     <a className="navbar-brand" href="#">
