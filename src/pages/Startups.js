@@ -4,41 +4,61 @@ import FAQAccordion from "../component/FAQAccordion";
 function Startups() {
     const whyBizDateUp = [
         {
-            src: 'assets/images/why-bizdate1.png',
+            src: '/assets/images/why-bizdate1.png',
             heading: 'Invest and Own a Piece of the Future',
             content: 'Unlike crowdfunding platforms where you pledge for rewards, on BizDateUp, your investment translates to real equity in high-potential startups.'
         },
         {
-            src: 'assets/images/why-bizdate2.png',
+            src: '/assets/images/why-bizdate2.png',
             heading: 'Grow Your Wealth with Time',
             content: 'Build a diverse investment portfolio by tapping into emerging startups across sectors. Leverage your expertise, insights, and the collective wisdom of fellow investors for long-term growth.'
         },
         {
-            src: 'assets/images/why-bizdate3.png',
+            src: '/assets/images/why-bizdate3.png',
             heading: 'Stay Connected and Involved',
             content: "As an investor on BizDateUp, you'll receive exclusive updates, attend events, watch founder videos, and directly engage with startup teams to help shape their journey to success."
         }
     ]
     const investments = [
         {
-            src:'/assets/images/bizdateup1.png',
+            src: '/assets/images/bizdateup1.png',
             heading: 'Create Your Startup Profile',
             content: 'Partner with aligned investors and fund managers, gaining access to high-potential startup opportunities and premium deal flow.'
         },
         {
-            src:'/assets/images/bizdateup2.png',
+            src: '/assets/images/bizdateup2.png',
             heading: 'Create a Winning Pitch',
             content: 'Craft a compelling pitch that showcases why investors should back your startup. Make it interactive by uploading videos that highlight your product, team, and vision, helping you stand out and truly sell your business to potential investors.'
         },
         {
-            src:'/assets/images/bizdateup3.png',
+            src: '/assets/images/bizdateup3.png',
             heading: 'Get listed and gain visibility.',
             content: 'Use the intuitive dashboard to keep an eye on all the investments made in your startup. Stay informed and manage your fundraising efforts with ease.',
         },
         {
-            src:'/assets/images/bizdateup4.png',
+            src: '/assets/images/bizdateup4.png',
             heading: 'Engage and Grow with Investor Feedback',
             content: 'Stay active and communicate regularly with investors. Their feedback can offer valuable insights, ideas, and strategies to help boost your sales and improve your business performance.'
+        }
+    ]
+    const companies = [
+        {
+            src: '/assets/images/portfolio-companies1.png',
+            valuation: '₹ 1.4 Cr',
+            currentValuation: '₹ 9.2  Cr',
+            content: 'Backed by Y Combinator, provides personal environmental exposure analysis and tracking to consumers'
+        },
+        {
+            src: '/assets/images/portfolio-companies2.png',
+            valuation: '₹ 1 Cr',
+            currentValuation: '₹ 1.7 Cr',
+            content: 'Backed by Y Combinator, provides personal environmental exposure analysis and tracking to consumers'
+        },
+        {
+            src: '/assets/images/portfolio-companies3.png',
+            valuation: '₹ 20 Cr',
+            currentValuation: '₹ 40.6 Cr',
+            content: 'Backed by Y Combinator, provides personal environmental exposure analysis and tracking to consumers'
         }
     ]
     return (
@@ -46,7 +66,7 @@ function Startups() {
             <section className="startup-hero-section hero-section">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-5">
+                        <div className="col-md-6 col-lg-5">
                             <div className="startup-hero">
                                 <h1>Grow your business with BizDateUp</h1>
                                 <p className="mt-3">Get funded, mentored, and connected to India's leading startup ecosystem</p>
@@ -55,8 +75,8 @@ function Startups() {
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-7 d-flex flex-row align-items-center justify-content-end">
-                            <img src="/assets/images/startup-hero.png" className="img-fluid" />
+                        <div className="col-md-6 col-lg-7 d-flex flex-row align-items-center justify-content-end mt-5 mt-md-0">
+                            <img src="/assets/images/startup-hero.png" className="img-fluid" /> 
                         </div>
                     </div>
                 </div>
@@ -140,6 +160,34 @@ function Startups() {
                     </div>
                 </div>
             </section>
+            <section className="portfolio-companies-section mt-5">
+                <div className="container">
+                    <div className="text-center">
+                        <h4 className="head">Portfolio Companies</h4>
+                    </div>
+                    <div className="row mt-5">
+                        {companies.map((data, index) => (
+                            <div className="col-md-6 col-lg-4" key={index}>
+                                <div className="card">
+                                    <img src={data.src} className="img" alt="img"/>
+                                    <div className="row">
+                                        <div className="col-md-6">
+                                            <h5 className="heading">{data.valuation}</h5>
+                                            <p className="subheading">Our Valuation</p>
+                                        </div>
+                                        <div className="col-md-6">
+                                            <h5 className="heading">{data.currentValuation}</h5>
+                                            <p className="subheading">Current Valuation</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p className="details">{data.content}</p>
+                            </div>
+
+                        ))}
+                    </div>
+                </div>
+            </section>
             <section className="why-bizdateup-section">
                 <div className="container">
                     <div className="text-center">
@@ -168,7 +216,7 @@ function Startups() {
                         <div className="row" key={index}>
                             <div className="col-lg-6">
                                 <div className="img d-flex flex-row align-items-center">
-                                    <img src={data.src} className="img-fluid"/>
+                                    <img src={data.src} className="img-fluid" />
                                 </div>
                             </div>
                             <div className="col-lg-6 d-flex flex-column justify-content-center">

@@ -1210,7 +1210,11 @@
 .opportunities-section {
     margin: 100px 0;
     padding: 40px;
-    background-color: var(--white);
+    background:linear-gradient(90deg, #FFFFFF 21.61%, #E8EDFE 50.28%, #FFFFFF 113.38%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 .opportunities-section .heading {
@@ -1261,6 +1265,53 @@
 }
 
 /* End Opportunities section */
+
+/* Portfolio Companies Section */
+.portfolio-companies-section .card{
+    border-radius: 16px;
+    border: 1px solid #D6D6D6;
+    padding:20px;
+}
+.portfolio-companies-section .head {
+    font-family: var(--font-sora);
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 58px;
+    color: #242552;
+}
+
+.portfolio-companies-section .card img{
+    opacity: 25%;
+    height:200px;
+    border-radius: 16px;
+    object-fit: cover;
+    object-position: top;
+}
+.portfolio-companies-section .card .heading{
+    font-family: var(--font-poppins);
+    font-size: 20px;
+    font-weight: 700;
+    color:var(--primary-blue);
+    margin-top:20px;
+}
+
+.portfolio-companies-section .card .subheading{
+    font-family: var(--font-poppins);
+    font-size: 16px;
+    font-weight: 400;
+    color:#A7A7A7;
+}
+
+.portfolio-companies-section .details{
+    font-family: var(--font-poppins);
+    font-size: 15px;
+    font-weight: 400;
+    color:#9E9E9E;
+    margin-top:25px;
+    line-height: 22.5px;
+
+}
+/* End Portfolio companies section */
 
 @media(max-width:768px) {
     .main-layout .future-of-startups .buttons{
