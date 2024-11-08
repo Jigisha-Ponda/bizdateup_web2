@@ -1522,6 +1522,18 @@
     padding: 10px 12px;
     margin: 20px 20px 20px 0;
 }
+.blog-label .blog-data.active {
+    font-family: var(--font-inter);
+    font-size: 12px;
+    font-weight: 600;
+    background-color: #fff;
+    border-radius: 7px;
+    padding: 10px 12px;
+    margin: 20px 20px 20px 0;
+    cursor: pointer;
+    color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
+}
 
 .blog-label .blog-data:hover {
     cursor: pointer;
@@ -1530,6 +1542,13 @@
     font-weight: 600;
     color: var(--primary-blue);
     border: 1px solid var(--primary-blue);
+}
+
+.blog-label .nav-tabs{
+    border-bottom: none;
+}
+.blog-label .nav-tabs .nav-link{
+    border-bottom: none;
 }
 
 .blog-details .blog-content {
@@ -1997,3 +2016,4 @@
     font-weight: 500;
     color: #929292;
 }
+
