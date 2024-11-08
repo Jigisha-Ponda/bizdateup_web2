@@ -54,6 +54,7 @@
 .navbar-toggler:focus {
     box-shadow: none;
 }
+
 .navbar-responsive {
     display: flex;
     flex-direction: row;
@@ -95,7 +96,7 @@
     flex-grow: 1;
     justify-content: space-between;
     background-color: var(--white);
-    padding-bottom:10px;
+    padding-bottom: 10px;
 }
 
 .main-layout .navbar-right-nav {
@@ -263,9 +264,9 @@
     margin: 20px 20px 20px 0;
 }
 
-.investment-section .investor-data:hover{
+.investment-section .investor-data:hover {
     cursor: pointer;
-    border: 1px solid #242552!important;
+    border: 1px solid #242552 !important;
 }
 
 /* End Investor */
@@ -997,7 +998,7 @@
 
 .faq-section .accordion {
     margin-top: 70px;
-    padding:0 50px;
+    padding: 0 50px;
 }
 
 .faq-section h1.heading {
@@ -1029,11 +1030,11 @@
     border-bottom-right-radius: 24px;
     line-height: 34px;
     border: 1px solid #EAEAEA;
-    box-shadow:none;
+    box-shadow: none;
 }
 
-.faq-section .accordion-button:not(.collapsed){
-    box-shadow:  0px 4px 22.6px 0px #83838340;
+.faq-section .accordion-button:not(.collapsed) {
+    box-shadow: 0px 4px 22.6px 0px #83838340;
 }
 
 .faq-section .accordion-button::after {
@@ -1087,35 +1088,40 @@
     font-weight: 500;
     color: #667085;
 }
-.faq-section .any-question{
+
+.faq-section .any-question {
     border: 1px solid #D6D6D6;
-    padding:25px;
+    padding: 25px;
     border-radius: 16px;
-    margin-top:60px;
+    margin-top: 60px;
 }
-.faq-section .any-question .heading{
+
+.faq-section .any-question .heading {
     font-family: var(--font-inter);
     font-size: 24px;
     font-weight: 400;
-    color:#2E2E27;
+    color: #2E2E27;
 }
-.faq-section .any-question .content{
+
+.faq-section .any-question .content {
     font-family: var(--font-inter);
-    font-size:15.38px;
+    font-size: 15.38px;
     font-weight: 400;
-    color:#2E2E27;
-    margin-top:14px;
+    color: #2E2E27;
+    margin-top: 14px;
     margin-bottom: 0;
 }
-.faq-section .any-question .btn{
+
+.faq-section .any-question .btn {
     background-color: var(--primary-color);
     color: var(--white);
     font-family: var(--font-inter);
     font-size: 14px;
     font-weight: 400;
-    padding:7px 14px;
-    margin:auto 0;
+    padding: 7px 14px;
+    margin: auto 0;
 }
+
 .accordion-item:last-of-type>.accordion-header .accordion-button.collapsed {
     border-radius: 24px;
 }
@@ -1184,25 +1190,30 @@
 
 .investor-label .investor-data:hover {
     cursor: pointer;
+    font-family: var(--font-inter);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
 }
 
 /* Startup */
-.main-layout .startup-hero-section{
+.main-layout .startup-hero-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 100vh;
     background: linear-gradient(90deg, #FFFFFF 21.61%, #E8EDFE 50.28%, #FFFFFF 113.38%);
     backdrop-filter: blur(300px);
-    margin-top:50px;
+    margin-top: 50px;
 }
 
-.main-layout .hero-section{
+.main-layout .hero-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     height: 85vh;
-    margin-top:50px;
+    margin-top: 50px;
 }
 
 .main-layout .startup-hero h1 {
@@ -1238,6 +1249,7 @@
     border: none;
     margin-right: 20px;
 }
+
 .main-layout .hero-banner-img {
     height: 87vh;
     width: 100%;
@@ -1250,7 +1262,7 @@
 .opportunities-section {
     margin: 100px 0;
     padding: 40px;
-    background:linear-gradient(90deg, #FFFFFF 21.61%, #E8EDFE 50.28%, #FFFFFF 113.38%);
+    background: linear-gradient(90deg, #FFFFFF 21.61%, #E8EDFE 50.28%, #FFFFFF 113.38%);
     min-height: 100vh;
     display: flex;
     flex-direction: row;
@@ -1307,11 +1319,12 @@
 /* End Opportunities section */
 
 /* Portfolio Companies Section */
-.portfolio-companies-section .card{
+.portfolio-companies-section .card {
     border-radius: 16px;
     border: 1px solid #D6D6D6;
-    padding:20px;
+    padding: 20px;
 }
+
 .portfolio-companies-section .head {
     font-family: var(--font-sora);
     font-size: 36px;
@@ -1319,54 +1332,59 @@
     line-height: 58px;
     color: #242552;
 }
-.portfolio-companies-section .content{
+
+.portfolio-companies-section .content {
     font-family: var(--font-inter);
     font-size: 20px;
     font-weight: 500;
-    color:#8E8E8E;
+    color: #8E8E8E;
     line-height: 38px;
-    width:70%;
-    margin:auto;
+    width: 70%;
+    margin: auto;
 }
-.portfolio-companies-section .card img{
+
+.portfolio-companies-section .card img {
     opacity: 25%;
-    height:200px;
+    height: 200px;
     border-radius: 16px;
     object-fit: cover;
     object-position: top;
 }
-.portfolio-companies-section .card .heading{
+
+.portfolio-companies-section .card .heading {
     font-family: var(--font-poppins);
     font-size: 20px;
     font-weight: 700;
-    color:var(--primary-blue);
-    margin-top:20px;
+    color: var(--primary-blue);
+    margin-top: 20px;
 }
 
-.portfolio-companies-section .card .subheading{
+.portfolio-companies-section .card .subheading {
     font-family: var(--font-poppins);
     font-size: 16px;
     font-weight: 400;
-    color:#A7A7A7;
+    color: #A7A7A7;
 }
 
-.portfolio-companies-section .details{
+.portfolio-companies-section .details {
     font-family: var(--font-poppins);
     font-size: 15px;
     font-weight: 400;
-    color:#9E9E9E;
-    margin-top:25px;
+    color: #9E9E9E;
+    margin-top: 25px;
     line-height: 22.5px;
 
 }
+
 /* End Portfolio companies section */
 
 /* Deals Section */
-.deals-section .card{
+.deals-section .card {
     border-radius: 16px;
     border: 1px solid #D6D6D6;
-    padding:20px;
+    padding: 20px;
 }
+
 .deals-section .head {
     font-family: var(--font-sora);
     font-size: 36px;
@@ -1374,47 +1392,51 @@
     line-height: 58px;
     color: #242552;
 }
-.deals-section .content{
+
+.deals-section .content {
     font-family: var(--font-inter);
     font-size: 20px;
     font-weight: 500;
-    color:#8E8E8E;
+    color: #8E8E8E;
     line-height: 38px;
-    width:70%;
-    margin:auto;
+    width: 70%;
+    margin: auto;
 }
-.deals-section .card img{
+
+.deals-section .card img {
     opacity: 25%;
-    height:200px;
+    height: 200px;
     border-radius: 16px;
     object-fit: cover;
     object-position: top;
 }
-.deals-section .card .heading{
+
+.deals-section .card .heading {
     font-family: var(--font-poppins);
     font-size: 20px;
     font-weight: 700;
-    color:var(--primary-blue);
-    margin-top:20px;
+    color: var(--primary-blue);
+    margin-top: 20px;
 }
 
-.deals-section .card .subheading{
+.deals-section .card .subheading {
     font-family: var(--font-poppins);
     font-size: 16px;
     font-weight: 400;
-    color:#A7A7A7;
-    margin-bottom:0.5rem;
+    color: #A7A7A7;
+    margin-bottom: 0.5rem;
 }
 
-.deals-section .details{
+.deals-section .details {
     font-family: var(--font-poppins);
     font-size: 15px;
     font-weight: 400;
-    color:#9E9E9E;
-    margin-top:5px;
+    color: #9E9E9E;
+    margin-top: 5px;
     line-height: 22.5px;
 
 }
+
 /* End Deals section */
 
 /* Syndicate Section */
@@ -1460,10 +1482,148 @@
 
 /* End Syndicate Section */
 
+/* Blogs Section */
+.blogs-section {
+    padding: 100px 0;
+}
+
+.blogs-section .heading {
+    font-family: var(--font-sora);
+    font-size: 40px;
+    font-weight: 700;
+    background: linear-gradient(90.66deg, #5153B8 2.82%, #9FB4FF 56.58%, #D2DCFF 89.22%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
+.blogs-section .content {
+    font-family: var(--font-poppins);
+    font-size: 19.84px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #7E7E7E;
+    margin-top: 30px;
+}
+
+.blog-labels {
+    margin-top: 0;
+}
+
+.blog-label .blog-data {
+    font-family: var(--font-inter);
+    font-size: 12px;
+    font-weight: 400;
+    color: #8B8B8B;
+    background-color: #fff;
+    border: 1px solid #D7D8FF;
+    border-radius: 7px;
+    padding: 10px 12px;
+    margin: 20px 20px 20px 0;
+}
+
+.blog-label .blog-data:hover {
+    cursor: pointer;
+    font-family: var(--font-inter);
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
+}
+
+.blog-details .blog-content {
+    border-bottom: 1px solid #E5E5E5;
+    padding: 60px 0 40px 0;
+}
+
+.blog-details .profile-img {
+    height: 50px;
+    width: 50px;
+}
+
+.blog-details .profile-img img {
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+}
+
+.blog-details .img {
+    border-radius: 16px;
+    width: 100%;
+}
+
+.blog-details .blogger-writer {
+    font-family: var(--font-inter);
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--primary-blue);
+    margin: 0 20px;
+}
+
+.blog-details .date {
+    font-family: var(--font-inter);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 63px;
+    color: #9B9B9B;
+    margin-bottom: 0;
+}
+
+.blog-details .heading {
+    font-family: var(--font-inter);
+    font-size: 24px;
+    font-weight: 500;
+    color: var(--primary-blue);
+    margin-top: 25px;
+}
+
+.blog-details .content {
+    font-family: var(--font-inter);
+    font-size: 16px;
+    font-weight: 400;
+    color: #949494;
+    margin-top: 25px;
+    line-height: 24px;
+}
+
+.blog-details .time {
+    font-family: var(--font-inter);
+    font-size: 16px;
+    font-weight: 500;
+    color: #616161;
+}
+
+.blog-details .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.blog-details .reading-time {
+    color: #616161;
+    font-size: 0.9rem;
+}
+
+.blog-details .article-thumbnail {
+    width: 80px;
+    height: auto;
+    border-radius: 8px;
+}
+
+.blog-details .thumbnail-img {
+    height: 8px;
+    width: 8px;
+}
+
+/* End Blogs Section */
+
 @media(max-width:768px) {
-    .main-layout .future-of-startups .buttons{
-        flex-direction: column!important;
+    .main-layout .future-of-startups .buttons {
+        flex-direction: column !important;
     }
+
     .tabs-layout .nav-item {
         width: 100% !important;
         margin-bottom: 20px;
@@ -1476,67 +1636,86 @@
     .investor-labels {
         padding: 0;
     }
-    .main-layout .navbar{
-        padding:0 15px;
+
+    .main-layout .navbar {
+        padding: 0 15px;
     }
+
     .investment-section {
         margin: 100px 0;
         padding: 40px 20px;
         background-color: var(--white);
     }
+
     .syndicate-section {
         margin: 100px 0;
         padding: 40px 20px;
         background-color: var(--white);
     }
+
     .blog-section-carousel .carousel-control-next {
         left: auto;
     }
-    .investor-section .investor-data{
-        margin:10px 20px 10px 0;
+
+    .investor-section .investor-data {
+        margin: 10px 20px 10px 0;
     }
-    .fund-section{
-        padding:20px;
-    }
-    .profit-section{
-        padding:20px;
-    }
-    .local-favourite-section{
+
+    .fund-section {
         padding: 20px;
     }
-    .why-bizdateup-section{
+
+    .profit-section {
         padding: 20px;
     }
-    .risk-section{
-        padding:20px;
-    }
-    .blog-section-carousel{
+
+    .local-favourite-section {
         padding: 20px;
     }
-    .investments-on-bizdateup{
+
+    .why-bizdateup-section {
         padding: 20px;
     }
-    .faq-section{
+
+    .risk-section {
         padding: 20px;
     }
-    .footer{
-        padding:100px 20px 30px 20px;
+
+    .blog-section-carousel {
+        padding: 20px;
     }
-    .footer .link{
-        margin-top:10px;
+
+    .investments-on-bizdateup {
+        padding: 20px;
     }
-    .hero-section{
-        padding:0 20px;
+
+    .faq-section {
+        padding: 20px;
     }
-    .main-layout .future-of-startups .start-investing-btn{
-        margin-right:0px;
+
+    .footer {
+        padding: 100px 20px 30px 20px;
     }
+
+    .footer .link {
+        margin-top: 10px;
+    }
+
+    .hero-section {
+        padding: 0 20px;
+    }
+
+    .main-layout .future-of-startups .start-investing-btn {
+        margin-right: 0px;
+    }
+
     .faq-section .accordion {
         margin-top: 70px;
-        padding:0px;
+        padding: 0px;
     }
-    .investor-label .investor-data{
-        margin:10px 20px 10px 0
+
+    .investor-label .investor-data {
+        margin: 10px 20px 10px 0
     }
 }
 
@@ -1569,6 +1748,19 @@
         margin-left: auto;
         margin-right: 0;
         bottom: -50px;
+    }
+
+    .blog-details .img {
+        border-radius: 16px;
+        width: auto;
+    }
+
+    .blogs-section {
+        padding: 20px;
+    }
+
+    .blog-details {
+        padding: 0 20px;
     }
 }
 

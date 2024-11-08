@@ -6,8 +6,8 @@ import 'bootstrap-icons/font/bootstrap-icons.css';
 import "./assets/css/App.css";
 import Home from './pages/Home';
 import StartAutoScroll from './pages/startAutoScroll';
-import Investor from './pages/Investors';
 import TabsLayout from './pages/TabsLayout';
+import Blogs from './pages/Blogs';
 
 function App() {
   return (
@@ -16,7 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         {/* <Route path="/scroll" element={<StartAutoScroll />} /> */}
         <Route path="/tabs" element={<TabsLayout />} />
-
+        <Route path="/blogs" element={<Blogs/>}/>
       </Routes>
     </BrowserRouter>
   );
