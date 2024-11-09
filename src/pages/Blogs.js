@@ -93,7 +93,7 @@ function Blogs() {
                             {Blogs.map((data, index) => (
                                 <div className="blog-content" key={index}>
                                     <div className="row d-flex justify-content-between">
-                                        <div className={data.src != '' ? "col-lg-7" : "col"}>
+                                        <div className={data.src !== '' ? "col-lg-7" : "col"}>
                                             <div className="d-flex flex-row flex-wrap flex-lg-nowrap align-items-center">
                                                 <div className="profile-img">
                                                     <img src="/assets/images/blogs-writer.png" alt="img" className="img" />
@@ -123,7 +123,7 @@ function Blogs() {
                             {Blogs.map((data, index) => (
                                 <div className="blog-content" key={index}>
                                     <div className="row d-flex justify-content-between">
-                                        <div className={data.src != '' ? "col-lg-7" : "col"}>
+                                        <div className={data.src !== '' ? "col-lg-7" : "col"}>
                                             <div className="d-flex flex-row flex-wrap flex-lg-nowrap align-items-center">
                                                 <div className="profile-img">
                                                     <img src="/assets/images/blogs-writer.png" alt="img" className="img" />
@@ -153,7 +153,7 @@ function Blogs() {
                             {Blogs.map((data, index) => (
                                 <div className="blog-content" key={index}>
                                     <div className="row d-flex justify-content-between">
-                                        <div className={data.src != '' ? "col-lg-7" : "col"}>
+                                        <div className={data.src !== '' ? "col-lg-7" : "col"}>
                                             <div className="d-flex flex-row flex-wrap flex-lg-nowrap align-items-center">
                                                 <div className="profile-img">
                                                     <img src="/assets/images/blogs-writer.png" alt="img" className="img" />
@@ -183,7 +183,7 @@ function Blogs() {
                             {Blogs.map((data, index) => (
                                 <div className="blog-content" key={index}>
                                     <div className="row d-flex justify-content-between">
-                                        <div className={data.src != '' ? "col-lg-7" : "col"}>
+                                        <div className={data.src !== '' ? "col-lg-7" : "col"}>
                                             <div className="d-flex flex-row flex-wrap flex-lg-nowrap align-items-center">
                                                 <div className="profile-img">
                                                     <img src="/assets/images/blogs-writer.png" alt="img" className="img" />
@@ -213,7 +213,7 @@ function Blogs() {
                             {Blogs.map((data, index) => (
                                 <div className="blog-content" key={index}>
                                     <div className="row d-flex justify-content-between">
-                                        <div className={data.src != '' ? "col-lg-7" : "col"}>
+                                        <div className={data.src !== '' ? "col-lg-7" : "col"}>
                                             <div className="d-flex flex-row flex-wrap flex-lg-nowrap align-items-center">
                                                 <div className="profile-img">
                                                     <img src="/assets/images/blogs-writer.png" alt="img" className="img" />
@@ -243,7 +243,7 @@ function Blogs() {
                             {Blogs.map((data, index) => (
                                 <div className="blog-content" key={index}>
                                     <div className="row d-flex justify-content-between">
-                                        <div className={data.src != '' ? "col-lg-7" : "col"}>
+                                        <div className={data.src !== '' ? "col-lg-7" : "col"}>
                                             <div className="d-flex flex-row flex-wrap flex-lg-nowrap align-items-center">
                                                 <div className="profile-img">
                                                     <img src="/assets/images/blogs-writer.png" alt="img" className="img" />
@@ -273,7 +273,7 @@ function Blogs() {
                             {Blogs.map((data, index) => (
                                 <div className="blog-content" key={index}>
                                     <div className="row d-flex justify-content-between">
-                                        <div className={data.src != '' ? "col-lg-7" : "col"}>
+                                        <div className={data.src !== '' ? "col-lg-7" : "col"}>
                                             <div className="d-flex flex-row flex-wrap flex-lg-nowrap align-items-center">
                                                 <div className="profile-img">
                                                     <img src="/assets/images/blogs-writer.png" alt="img" className="img" />

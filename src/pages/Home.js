@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import Header from "../component/Header";
 import Footer from "../component/Footer";
 import FAQAccordion from "../component/FAQAccordion";
+import AutoScroll from "./startAutoScroll";
 
 function Home() {
     const InvestorData = [
@@ -77,27 +78,59 @@ function Home() {
             content: 'Invest across a wide range of industries and syndicates, joining forces with like-minded investors to grow your startup portfolio.'
         }
     ]
+    const scrollContainerRef = useRef(null);
+    const scrollInterval = useRef(null);
+
+    const startAutoScroll = () => {
+        scrollInterval.current = setInterval(() => {
+            if (scrollContainerRef.current) {
+                const container = scrollContainerRef.current;
+                container.scrollTop += 1; 
+
+                if (container.scrollTop >= container.scrollHeight - container.clientHeight) {
+                    const cardsWrapper = container.querySelector('.cards-wrapper');
+                    const firstCard = cardsWrapper.querySelector('.hero-cards');
+
+                    cardsWrapper.appendChild(firstCard);
+
+                    container.scrollTop = container.scrollHeight - container.clientHeight;
+                }
+            }
+        }, 20); 
+    };
+
+    const stopAutoScroll = () => {
+        if (scrollInterval.current) {
+            clearInterval(scrollInterval.current);
+        }
+    };
+
+    useEffect(() => {
+        startAutoScroll();
+
+        return () => stopAutoScroll();
+    }, []);
+
     return (
-        <div className="home-page">
+        <div className="main-layout">
             <Header />
-            <section className="hero-section">
+            <section className="hero-section mt-0">
                 <div className="container">
-                    <div className="row">
-                        <div className="col-lg-5">
+                    <div className="row d-flex justify-content-between">
+                        <div className="col-xl-5">
                             <div className="future-of-startups">
                                 <h1>Powering the Future of <span>Startups and Investment</span></h1>
                                 <p className="mt-3">Whether you're an investor seeking exciting opportunities or a startup looking for the right support, we bring everything you need to make the right connections.</p>
                                 <div className="buttons">
                                     <button className="start-investing-btn">Join BizDateUp<img src="/assets/images/right-arrow.png" alt="icon" className="ms-1" /></button>
-                                    <button className="enroll-startup-btn">Start Investing<img src="/assets/images/right-arrow-primary.png" alt="icon" className="ms-1" /></button>
+                                    <button className="enroll-startup-btn mt-2 mt-sm-0">Start Investing<img src="/assets/images/right-arrow-primary.png" alt="icon" className="ms-1" /></button>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-lg-7">
-                            <img src="/assets/images/hero-startup-banner.png" alt="img" className="hero-banner-img" />
+                        <div className="col-xl-6 px-5 px-xl-0">
+                            <AutoScroll />
                         </div>
                     </div>
-
                 </div>
             </section>
             <section className="investor-section">
@@ -130,8 +163,8 @@ function Home() {
                                 <div className="row">
                                     <div className="col-md-6 col-lg-4">
                                         <div className="card">
-                                            <img src="/assets/images/fund1-img.jpeg" alt="image" className="img-fluid card-img card-img1" />
-                                            <img src="/assets/images/HiTech.png" alt="image" className="h-25 w-25 my-3" />
+                                            <img src="/assets/images/fund1-img.jpeg" alt="img" className="img-fluid card-img card-img1" />
+                                            <img src="/assets/images/HiTech.png" alt="img" className="h-25 w-25 my-3" />
                                             <p className="subcontent">Advanced AI-driven cybersecurity solutions to protect businesses from evolving threats.</p>
                                             <div className="d-flex flex-wrap">
                                                 <label>EV</label>
@@ -145,8 +178,8 @@ function Home() {
                                     </div>
                                     <div className="col-md-6 col-lg-4">
                                         <div className="card">
-                                            <img src="/assets/images/fund2-img.png" alt="image" className="img-fluid card-img" />
-                                            <img src="/assets/images/Eco-Wave.png" alt="image" className="h-50 w-50 my-3" />
+                                            <img src="/assets/images/fund2-img.png" alt="img" className="img-fluid card-img" />
+                                            <img src="/assets/images/Eco-Wave.png" alt="img" className="h-50 w-50 my-3" />
                                             <p className="subcontent">Revolutionizing sustainable energy solutions with innovative, eco-friendly technologies.</p>
                                             <div className="d-flex flex-wrap">
                                                 <label>EV</label>
@@ -158,8 +191,8 @@ function Home() {
                                     </div>
                                     <div className="col-md-6 col-lg-4 mx-auto">
                                         <div className="card">
-                                            <img src="/assets/images/fund3-img.png" alt="image" className="img-fluid card-img" />
-                                            <img src="/assets/images/Healthify.png" alt="image" className="h-25 w-25 my-3" />
+                                            <img src="/assets/images/fund3-img.png" alt="img" className="img-fluid card-img" />
+                                            <img src="/assets/images/Healthify.png" alt="img" className="h-25 w-25 my-3" />
                                             <p className="subcontent">Revolutionizing sustainable energy solutions with innovative, eco-friendly technologies.</p>
                                             <div className="d-flex flex-wrap">
                                                 <label>EV</label>
@@ -176,8 +209,8 @@ function Home() {
                                     <div className="row">
                                         <div className="col-md-6 col-lg-4">
                                             <div className="card">
-                                                <img src="/assets/images/fund1-img.jpeg" alt="image" className="img-fluid card-img card-img1" />
-                                                <img src="/assets/images/HiTech.png" alt="image" className="h-25 w-25 my-3" />
+                                                <img src="/assets/images/fund1-img.jpeg" alt="img" className="img-fluid card-img card-img1" />
+                                                <img src="/assets/images/HiTech.png" alt="img" className="h-25 w-25 my-3" />
                                                 <p className="subcontent">Advanced AI-driven cybersecurity solutions to protect businesses from evolving threats.</p>
                                                 <div className="d-flex flex-wrap">
                                                     <label>EV</label>
@@ -191,8 +224,8 @@ function Home() {
                                         </div>
                                         <div className="col-md-6 col-lg-4">
                                             <div className="card">
-                                                <img src="/assets/images/fund2-img.png" alt="image" className="img-fluid card-img" />
-                                                <img src="/assets/images/Eco-Wave.png" alt="image" className="h-50 w-50 my-3" />
+                                                <img src="/assets/images/fund2-img.png" alt="img" className="img-fluid card-img" />
+                                                <img src="/assets/images/Eco-Wave.png" alt="img" className="h-50 w-50 my-3" />
                                                 <p className="subcontent">Revolutionizing sustainable energy solutions with innovative, eco-friendly technologies.</p>
                                                 <div className="d-flex flex-wrap">
                                                     <label>EV</label>
@@ -204,8 +237,8 @@ function Home() {
                                         </div>
                                         <div className="col-md-6 col-lg-4 mx-auto">
                                             <div className="card">
-                                                <img src="/assets/images/fund3-img.png" alt="image" className="img-fluid card-img" />
-                                                <img src="/assets/images/Healthify.png" alt="image" className="h-25 w-25 my-3" />
+                                                <img src="/assets/images/fund3-img.png" alt="img" className="img-fluid card-img" />
+                                                <img src="/assets/images/Healthify.png" alt="img" className="h-25 w-25 my-3" />
                                                 <p className="subcontent">Revolutionizing sustainable energy solutions with innovative, eco-friendly technologies.</p>
                                                 <div className="d-flex flex-wrap">
                                                     <label>EV</label>
@@ -223,8 +256,8 @@ function Home() {
                                 <div className="row">
                                     <div className="col-md-6 col-lg-4">
                                         <div className="card">
-                                            <img src="/assets/images/fund1-img.jpeg" alt="image" className="img-fluid card-img card-img1" />
-                                            <img src="/assets/images/HiTech.png" alt="image" className="h-25 w-25 my-3" />
+                                            <img src="/assets/images/fund1-img.jpeg" alt="img" className="img-fluid card-img card-img1" />
+                                            <img src="/assets/images/HiTech.png" alt="img" className="h-25 w-25 my-3" />
                                             <p className="subcontent">Advanced AI-driven cybersecurity solutions to protect businesses from evolving threats.</p>
                                             <div className="d-flex flex-wrap">
                                                 <label>EV</label>
@@ -238,8 +271,8 @@ function Home() {
                                     </div>
                                     <div className="col-md-6 col-lg-4">
                                         <div className="card">
-                                            <img src="/assets/images/fund2-img.png" alt="image" className="img-fluid card-img" />
-                                            <img src="/assets/images/Eco-Wave.png" alt="image" className="h-50 w-50 my-3" />
+                                            <img src="/assets/images/fund2-img.png" alt="img" className="img-fluid card-img" />
+                                            <img src="/assets/images/Eco-Wave.png" alt="img" className="h-50 w-50 my-3" />
                                             <p className="subcontent">Revolutionizing sustainable energy solutions with innovative, eco-friendly technologies.</p>
                                             <div className="d-flex flex-wrap">
                                                 <label>EV</label>
@@ -251,8 +284,8 @@ function Home() {
                                     </div>
                                     <div className="col-md-6 col-lg-4 mx-auto">
                                         <div className="card">
-                                            <img src="/assets/images/fund3-img.png" alt="image" className="img-fluid card-img" />
-                                            <img src="/assets/images/Healthify.png" alt="image" className="h-25 w-25 my-3" />
+                                            <img src="/assets/images/fund3-img.png" alt="img" className="img-fluid card-img" />
+                                            <img src="/assets/images/Healthify.png" alt="img" className="h-25 w-25 my-3" />
                                             <p className="subcontent">Revolutionizing sustainable energy solutions with innovative, eco-friendly technologies.</p>
                                             <div className="d-flex flex-wrap">
                                                 <label>EV</label>
@@ -288,7 +321,7 @@ function Home() {
                                 <button className="btn">Start Investing Today</button>
                             </div>
                             <div className="col-lg-7">
-                                <img src="/assets/images/profit.png" alt="image" className="ms-lg-auto mt-5 mt-lg-0 img-fluid d-flex justify-content-lg-end" />
+                                <img src="/assets/images/profit.png" alt="img" className="ms-lg-auto mt-5 mt-lg-0 img-fluid d-flex justify-content-lg-end" />
                             </div>
                         </div>
                     </div>
@@ -324,12 +357,58 @@ function Home() {
                                     </div>
                                     <div className="carousel-inner">
                                         <div className="carousel-item active">
+                                            <div className="card">
+                                                <img src="/assets/images/client.png" alt="img" className="card-img" />
+                                                <div className="card-bottom-content">
+                                                    <div className="medi-content">
+                                                        <img src="/assets/images/plus-image.png" alt="img" className="plus-img" />
+                                                        Medi ++
+                                                    </div>
+                                                    <p className="card-content my-4">Bringing doctors, patients, and AI-powered diagnostics together for ultimate healthcare access.</p>
+                                                    <div className="row">
+                                                        <div className="col-lg-6">
+                                                            <h5 className="investors">₹ 7,00,00</h5>
+                                                            <p className="investors-content">Invested</p>
+                                                        </div>
+                                                        <div className="col-lg-6">
+                                                            <h5 className="investors">80</h5>
+                                                            <p className="investors-content">Investors</p>
+                                                        </div>
+                                                    </div>
+                                                    <button className="btn mt-3">Explore Healthcare Startups</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="carousel-item">
+                                            <div className="card">
+                                                <img src="/assets/images/client.png" alt="img" className="card-img" />
+                                                <div className="card-bottom-content">
+                                                    <div className="medi-content">
+                                                        <img src="/assets/images/plus-image.png" alt="img" className="plus-img" />
+                                                        Medi ++
+                                                    </div>
+                                                    <p className="card-content my-4">Bringing doctors, patients, and AI-powered diagnostics together for ultimate healthcare access.</p>
+                                                    <div className="row">
+                                                        <div className="col-lg-6">
+                                                            <h5 className="investors">₹ 7,00,00</h5>
+                                                            <p className="investors-content">Invested</p>
+                                                        </div>
+                                                        <div className="col-lg-6">
+                                                            <h5 className="investors">80</h5>
+                                                            <p className="investors-content">Investors</p>
+                                                        </div>
+                                                    </div>
+                                                    <button className="btn mt-3">Explore Healthcare Startups</button>
+                                                </div>
+                                            </div>
 
+                                        </div>
+                                        <div className="carousel-item">
                                             <div className="card">
-                                                <img src="/assets/images/client.png" alt="image" className="card-img" />
+                                                <img src="/assets/images/client.png" alt="img" className="card-img" />
                                                 <div className="card-bottom-content">
                                                     <div className="medi-content">
-                                                        <img src="/assets/images/plus-image.png" alt="image" className="plus-img" />
+                                                        <img src="/assets/images/plus-image.png" alt="img" className="plus-img" />
                                                         Medi ++
                                                     </div>
                                                     <p className="card-content my-4">Bringing doctors, patients, and AI-powered diagnostics together for ultimate healthcare access.</p>
@@ -349,57 +428,10 @@ function Home() {
                                         </div>
                                         <div className="carousel-item">
                                             <div className="card">
-                                                <img src="/assets/images/client.png" alt="image" className="card-img" />
+                                                <img src="/assets/images/client.png" alt="img" className="card-img" />
                                                 <div className="card-bottom-content">
                                                     <div className="medi-content">
-                                                        <img src="/assets/images/plus-image.png" alt="image" className="plus-img" />
-                                                        Medi ++
-                                                    </div>
-                                                    <p className="card-content my-4">Bringing doctors, patients, and AI-powered diagnostics together for ultimate healthcare access.</p>
-                                                    <div className="row">
-                                                        <div className="col-lg-6">
-                                                            <h5 className="investors">₹ 7,00,00</h5>
-                                                            <p className="investors-content">Invested</p>
-                                                        </div>
-                                                        <div className="col-lg-6">
-                                                            <h5 className="investors">80</h5>
-                                                            <p className="investors-content">Investors</p>
-                                                        </div>
-                                                    </div>
-                                                    <button className="btn mt-3">Explore Healthcare Startups</button>
-                                                </div>
-                                            </div>
-
-                                        </div>
-                                        <div className="carousel-item">
-                                            <div className="card">
-                                                <img src="/assets/images/client.png" alt="image" className="card-img" />
-                                                <div className="card-bottom-content">
-                                                    <div className="medi-content">
-                                                        <img src="/assets/images/plus-image.png" alt="image" className="plus-img" />
-                                                        Medi ++
-                                                    </div>
-                                                    <p className="card-content my-4">Bringing doctors, patients, and AI-powered diagnostics together for ultimate healthcare access.</p>
-                                                    <div className="row">
-                                                        <div className="col-lg-6">
-                                                            <h5 className="investors">₹ 7,00,00</h5>
-                                                            <p className="investors-content">Invested</p>
-                                                        </div>
-                                                        <div className="col-lg-6">
-                                                            <h5 className="investors">80</h5>
-                                                            <p className="investors-content">Investors</p>
-                                                        </div>
-                                                    </div>
-                                                    <button className="btn mt-3">Explore Healthcare Startups</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div className="carousel-item">
-                                            <div className="card">
-                                                <img src="/assets/images/client.png" alt="image" className="card-img" />
-                                                <div className="card-bottom-content">
-                                                    <div className="medi-content">
-                                                        <img src="/assets/images/plus-image.png" alt="image" className="plus-img" />
+                                                        <img src="/assets/images/plus-image.png" alt="img" className="plus-img" />
                                                         Medi ++
                                                     </div>
                                                     <p className="card-content my-4">Bringing doctors, patients, and AI-powered diagnostics together for ultimate healthcare access.</p>
@@ -444,12 +476,11 @@ function Home() {
                     <div className="row mt-5">
                         {whyBizDateUp.map((data, index) => (
                             <div className="col-lg-4 mt-5 text-center" key={index}>
-                                <img src={data.src} alt="image" className="mx-auto" />
+                                <img src={data.src} alt="img" className="mx-auto" />
                                 <h6 className="subheading my-4">{data.heading}</h6>
                                 <p className="subcontent">{data.content}</p>
                             </div>
                         ))}
-
                     </div>
                 </div>
             </section>
@@ -463,7 +494,7 @@ function Home() {
                                 <button className="btn">Learn more in our investor FAQ</button>
                             </div>
                             <div className="col-lg-7">
-                                <img src="/assets/images/profit.png" alt="image" className="ms-lg-auto mt-5 mt-lg-0 d-flex justify-content-lg-end" />
+                                <img src="/assets/images/profit.png" alt="img" className="ms-lg-auto mt-5 mt-lg-0 d-flex justify-content-lg-end" />
                             </div>
                         </div>
                     </div>
@@ -501,7 +532,7 @@ function Home() {
                                     <div className="row">
                                         <div className="col-md-6">
                                             <div className="blogs-right-img">
-                                                <img src="/assets/images/blog-post.png" className="img-fluid" />
+                                                <img src="/assets/images/blog-post.png" className="img-fluid" alt="img" />
                                             </div>
                                         </div>
                                         <div className="col-md-6">
@@ -519,7 +550,7 @@ function Home() {
                                     <div className="row">
                                         <div className="col-md-6">
                                             <div className="blogs-right-img">
-                                                <img src="/assets/images/blog-post.png" className="img-fluid" />
+                                                <img src="/assets/images/blog-post.png" className="img-fluid" alt="img" />
                                             </div>
                                         </div>
                                         <div className="col-md-6">
@@ -537,7 +568,7 @@ function Home() {
                                     <div className="row">
                                         <div className="col-md-6">
                                             <div className="blogs-right-img">
-                                                <img src="/assets/images/blog-post.png" className="img-fluid" />
+                                                <img src="/assets/images/blog-post.png" className="img-fluid" alt="img" />
                                             </div>
                                         </div>
                                         <div className="col-md-6">
@@ -575,7 +606,6 @@ function Home() {
                             <h6 className="subheading">Everything you need to know</h6>
                             <h4 className="heading my-4">Effortless, Fast & Rewarding Investments on BizDateUp</h4>
                             <p className="content">Experience a seamless journey as you invest in startups and syndicates, designed to be simple, quick, and enjoyable.</p>
-
                             <ul className="nav flex-column nav-tabs mt-5" id="myTab" role="tablist">
                                 <li className="nav-item" role="presentation">
                                     <button className="nav-link active" id="startup-tab" data-bs-toggle="tab" data-bs-target="#startup-tab-pane" type="button" role="tab" aria-controls="startup-tab-pane" aria-selected="true">Invest in startups</button>
@@ -590,11 +620,14 @@ function Home() {
                         </div>
                         <div className="col-lg-6">
                             <div className="tab-content" id="myTabContent">
-                                <div className="tab-pane fade show active" id="startup-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabIndex="0"> <img src="/assets/images/investment-on-bizdateup.png" className="ms-lg-auto d-flex justify-content-end" />
+                                <div className="tab-pane fade show active" id="startup-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabIndex="0">
+                                    <img src="/assets/images/investment-on-bizdateup.png" className="ms-lg-auto d-flex justify-content-end" alt="img" />
                                 </div>
-                                <div className="tab-pane fade" id="syndicate-tab-pane" role="tabpanel" aria-labelledby="syndicate-tab" tabIndex="0"> <img src="/assets/images/investment-on-bizdateup.png" className="ms-lg-auto d-flex justify-content-end" />
+                                <div className="tab-pane fade" id="syndicate-tab-pane" role="tabpanel" aria-labelledby="syndicate-tab" tabIndex="0">
+                                    <img src="/assets/images/investment-on-bizdateup.png" className="ms-lg-auto d-flex justify-content-end" alt="img" />
                                 </div>
-                                <div className="tab-pane fade" id="investments-tab-pane" role="tabpanel" aria-labelledby="investments-tab" tabIndex="0"> <img src="/assets/images/investment-on-bizdateup.png" className="ms-lg-auto d-flex justify-content-end" />
+                                <div className="tab-pane fade" id="investments-tab-pane" role="tabpanel" aria-labelledby="investments-tab" tabIndex="0">
+                                    <img src="/assets/images/investment-on-bizdateup.png" className="ms-lg-auto d-flex justify-content-end" alt="img" />
                                 </div>
                             </div>
                         </div>
