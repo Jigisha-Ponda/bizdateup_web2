@@ -85,7 +85,7 @@ function Home() {
         scrollInterval.current = setInterval(() => {
             if (scrollContainerRef.current) {
                 const container = scrollContainerRef.current;
-                container.scrollTop += 1; 
+                container.scrollTop += 1;
 
                 if (container.scrollTop >= container.scrollHeight - container.clientHeight) {
                     const cardsWrapper = container.querySelector('.cards-wrapper');
@@ -96,7 +96,7 @@ function Home() {
                     container.scrollTop = container.scrollHeight - container.clientHeight;
                 }
             }
-        }, 20); 
+        }, 20);
     };
 
     const stopAutoScroll = () => {
@@ -128,7 +128,9 @@ function Home() {
                             </div>
                         </div>
                         <div className="col-xl-6 px-5 px-xl-0">
-                            <AutoScroll />
+                            <div className="auto-card-scroll">
+                                <AutoScroll />
+                            </div>
                         </div>
                     </div>
                 </div>
